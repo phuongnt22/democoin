@@ -2,11 +2,11 @@
   "name": "democoin",
   "version": "0.0.2",
   "description": "Democoin, a cryptocurrency demonstration",
-  "homepage": "https://github.com/conradoqg/democoin",
+  "homepage": "https://github.com/phuongnt22/democoin",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/conradoqg/democoin.git"
+    "url": "https://github.com/phuongnt22/democoin.git"
   },
   "bin": {
     "democoin": "bin/democoin.js"
