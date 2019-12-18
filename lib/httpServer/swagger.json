@@ -1,13 +1,13 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Visualize the blockchain by accessing <a href='/blockchain' target='_blank'>here</a>.",
+        "description": "<b><a href='/blockchain' target='_blank'>Blockchain Visualize</a></b>",
         "version": "0.0.1",
         "title": "Democoin API"
     },
     "basePath": "/",
     "schemes": [
-        "http"
+        "https"
     ],
     "consumes": [
         "application/json"
