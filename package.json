@@ -12,7 +12,7 @@
     "democoin": "bin/democoin.js"
   },
   "scripts": {
-    "start": "node bin/democoin.js",
+    "start": "node bin/democoin.js --name master_node",
     "compose:up": "docker-compose up",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "coverage": "nyc --reporter=lcov --reporter=text --clean node node_modules/mocha/bin/_mocha -u bdd --colors test/",
