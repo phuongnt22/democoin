@@ -253,7 +253,7 @@
         "/operator/wallets": {
             "get": {
                 "tags": [
-                    "Operator"
+                    "Operator - Wallet"
                 ],
                 "summary": "Get all wallets",
                 "description": "",
@@ -271,7 +271,7 @@
             },
             "post": {
                 "tags": [
-                    "Operator"
+                    "Operator - Wallet"
                 ],
                 "summary": "Create a wallet from a password",
                 "description": "",
@@ -308,7 +308,7 @@
         "/operator/wallets/{walletId}": {
             "get": {
                 "tags": [
-                    "Operator"
+                    "Operator - Wallet"
                 ],
                 "summary": "Get wallet by id",
                 "description": "",
@@ -337,7 +337,7 @@
         "/operator/wallets/{walletId}/addresses": {
             "get": {
                 "tags": [
-                    "Operator"
+                    "Operator - Wallet"
                 ],
                 "summary": "Get all addresses of a wallet",
                 "description": "",
@@ -367,7 +367,7 @@
             },
             "post": {
                 "tags": [
-                    "Operator"
+                    "Operator - Wallet"
                 ],
                 "summary": "Create a new address",
                 "description": "",
@@ -415,7 +415,7 @@
         "/operator/wallets/{walletId}/transactions": {
             "post": {
                 "tags": [
-                    "Operator"
+                    "Operator - Wallet"
                 ],
                 "summary": "Create a new transaction",
                 "description": "",
@@ -490,7 +490,7 @@
         "/operator/{addressId}/balance": {
             "get": {
                 "tags": [
-                    "Operator"
+                    "Operator - Wallet"
                 ],
                 "summary": "Get the balance of a given address",
                 "description": "",
