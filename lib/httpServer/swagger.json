@@ -170,25 +170,7 @@
                 }
             }
         },
-        "/blockchain/transactions": {
-            "get": {
-                "tags": [
-                    "Blockchain"
-                ],
-                "summary": "Get unconfirmed transactions",
-                "description": "",
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/Transaction"
-                            }
-                        }
-                    }
-                }
-            },
+        "/blockchain/transactions": {            
             "post": {
                 "tags": [
                     "Blockchain"
@@ -221,36 +203,7 @@
                     }
                 }
             }
-        },
-        "/blockchain/transactions/unspent": {
-            "get": {
-                "tags": [
-                    "Blockchain"
-                ],
-                "summary": "Get unspent transactions",
-                "description": "",
-                "parameters": [
-                    {
-                        "in": "query",
-                        "name": "address",
-                        "description": "Address id",
-                        "required": false,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/Transaction"
-                            }
-                        }
-                    }
-                }
-            }
-        },
+        },        
         "/operator/wallets": {
             "get": {
                 "tags": [
@@ -305,67 +258,9 @@
                     }
                 }
             }
-        },
-        "/operator/wallets/{walletId}": {
-            "get": {
-                "tags": [
-                    "Operator - Wallet"
-                ],
-                "summary": "Get wallet by id",
-                "description": "",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "walletId",
-                        "description": "Wallet id",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/Wallet"
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found"
-                    }
-                }
-            }
-        },
+        },        
         "/operator/wallets/{walletId}/addresses": {
-            "get": {
-                "tags": [
-                    "Operator - Wallet"
-                ],
-                "summary": "Get all addresses of a wallet",
-                "description": "",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "walletId",
-                        "description": "Wallet id",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/Address"
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request"
-                    }
-                }
-            },
+            
             "post": {
                 "tags": [
                     "Operator - Wallet"
@@ -565,37 +460,7 @@
                 }
             }
         },
-        "/node/transactions/{transactionId}/confirmations": {
-            "get": {
-                "tags": [
-                    "Node"
-                ],
-                "summary": "Get how many confirmations a block has",
-                "description": "",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "transactionId",
-                        "description": "Transaction id",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "type": "object",
-                            "properties": {
-                                "confirmations": {
-                                    "type": "integer"
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
+        
         "/miner/mine": {
             "post": {
                 "tags": [
