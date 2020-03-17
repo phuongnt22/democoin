@@ -85,17 +85,20 @@ window.addEventListener('offline', handleConnection);
 
 function handleConnection() {
   if (navigator.onLine) {
-    isReachable('http://tinder.com').then(function(online) {
+    isReachable('https://tinder.com').then(function(online) {
       if (online) {
         // handle online status
-        console.log('online');
+        console.log('>> online');
+        alert("Online");
       } else {
-        console.log('no connectivity');
+        console.log('>> no connectivity');
+        alert("no connectivity");
       }
     });
   } else {
     // handle offline status
-    console.log('offline');
+    console.log('>> offline');
+    alert("offline");
   }
 }
 
