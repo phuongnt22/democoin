@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+table.names tr:nth-child(even) {
+  background-color: #eee;
+}
+table.names tr:nth-child(odd) {
+  background-color:#fff;
+}
+table.names th {
+  background-color: black;
+  color: white
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+
+<br>
+
+<table class="names">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+</body>
+
+<script> 
+
+console.log('>> start');
+
+window.addEventListener('online', handleConnection);
+window.addEventListener('offline', handleConnection);
+
+function handleConnection() {
+  if (navigator.onLine) {
+    isReachable('http://tinder.com').then(function(online) {
+      if (online) {
+        // handle online status
+        console.log('online');
+      } else {
+        console.log('no connectivity');
+      }
+    });
+  } else {
+    // handle offline status
+    console.log('offline');
+  }
+}
+
+function isReachable(url) {
+  /**
+   * Note: fetch() still "succeeds" for 404s on subdirectories,
+   * which is ok when only testing for domain reachability.
+   *
+   * Example:
+   *   https://google.com/noexist does not throw
+   *   https://noexist.com/noexist does throw
+   */
+  return fetch(url, { method: 'HEAD', mode: 'no-cors' })
+    .then(function(resp) {
+      return resp && (resp.ok || resp.type === 'opaque');
+    })
+    .catch(function(err) {
+      console.warn('[conn test failure]:', err);
+    });
+}
+
+</script>
+
+</html>
+
