@@ -24,7 +24,7 @@
     "cli-color": "^1.2.0",
     "elliptic": "^6.5.2",
     "es6-error": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fs-extra": "^8.1.0",
     "pug": "^2.0.0-rc.4",
     "ramda": "^0.26.1",
